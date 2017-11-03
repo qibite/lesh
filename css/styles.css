@@ -100,10 +100,11 @@ span.whyimg
 
 .whyimg>img
 {
-	width: 360px;
+	width: 90%;
     padding: 50px;
     border: 1px solid #292b2c;
     border-radius: 50%;
+    margin-bottom: 1em;
 }
 
 #first>p
@@ -125,4 +126,40 @@ span.whyimg
 
 }
 
+#first>div>span:first-child
+{
+	margin-left:4.15%;
+}
+
+@media screen and (max-width:600px) {
+	#header
+	{
+		height: 60vh;
+	}
+
+	#nadzagolovok
+	{
+		font-size: 1.8em;
+		background-color: rgba(41, 43, 44, 0.6);
+	}
+
+	#zagolovok {
+	    background-color: rgba(41, 43, 44, 0.6);
+	}
+
+	#podzagolovok
+	{
+    	font-size: 0.74em;
+	}
+
+	#first>div>span:first-child
+	{
+		margin-left:0;
+	}
+
+	.whyimg>img
+	{
+		padding: 25px;
+	}
+}
 
