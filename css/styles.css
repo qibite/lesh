@@ -1,0 +1,128 @@
+@font-face {
+			font-family: "AleksandraCRegular";
+			src: url("../fonts/AleksandraCRegular/AleksandraCRegular.eot");
+			src: url("../fonts/AleksandraCRegular/AleksandraCRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/AleksandraCRegular/AleksandraCRegular.woff") format("woff"),
+			url("../fonts/AleksandraCRegular/AleksandraCRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+h1, h2, h3, h4
+{
+    font-family: "AleksandraCRegular";
+}
+
+#parallax > div.row
+{
+	height: 100%;
+	margin: 0;
+}
+#header > div.row {margin: 0;}
+
+#header
+{
+	position: relative;
+	background-image: url('../img/bgh.jpg');
+	height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#first
+{
+	position: relative;
+    background-color: #FFF;
+    overflow: hidden;
+    min-height: 500px;
+    /*background-image: url('../img/first.jpg');
+    background-size: 100vh;
+    background-position: 100% 0;*/
+}
+
+#contaner_zagolovok
+{
+	position: relative;
+	height: 100%;
+}
+#nadzagolovok
+{
+	text-align: center;
+    background-color: #292b2c;
+    color: #FFF;
+    padding: 0.5em;
+}
+
+#zagolovok
+{
+	background-color: #292b2c;
+    color: #FFF;
+    text-align: center;
+    padding: 1em 0em;
+}
+
+#podzagolovok
+{
+	font-size: 1em;
+	text-align: center;
+}
+
+#why, #by
+{
+	position: relative;
+	padding-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#why::after, #by::after
+{
+	content: '';
+    position: absolute;
+    width: 60%;
+    height: 1.5px;
+    background-color: #000;
+    bottom: -10px;
+    left: 20%;
+}
+
+span.whyimg
+{
+	display: inline-block;
+}
+
+.whyimg
+{
+	text-align: center;
+}
+
+.whyimg>img
+{
+	width: 360px;
+    padding: 50px;
+    border: 1px solid #292b2c;
+    border-radius: 50%;
+}
+
+#first>p
+{
+	padding: 20px 0 20px 25px;
+	margin-top: 50px;
+	border-left: 4px solid #292b2c;
+}
+
+#parallax
+{
+	position: relative;
+	background-image: url('../img/parallax_1.jpg');
+	height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+
+}
+
+
