@@ -16,15 +16,39 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/tether.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+	<script>
+		var map;
+
+	    DG.then(function () {
+	        map = DG.map('map', {
+	            center: [52.02853, 113.508568],
+	            zoom: 17
+	        });
+
+	        DG.marker([52.02853, 113.508568]).addTo(map).bindPopup('Тут!');
+
+	        /*map.locate({setView: true, watch: true})
+                    .on('locationfound', function(e) {
+                        DG.marker([e.latitude, e.longitude]).addTo(map);
+                    })
+                    .on('locationerror', function(e) {
+                        DG.popup()
+                          .setLatLng(map.getCenter())
+                          .setContent('Доступ к определению местоположения отключён')
+                          .openOn(map);
+                    });*/
+	    });
+	</script>
 </head>
 <body>
 	<header id="header" class="conteiner-fluid">
 		<div id="contaner_zagolovok" class="row">
-			<h2 id="nadzagolovok" class="col-md-3 offset-md-8 align-self-end animated bounceIn"><i class="fa fa-mobile" aria-hidden="true"></i> +7 (914) 471-00-18</h2>
-			<h1 id="zagolovok" class="col-md-3 offset-md-8 align-self-center animated">
+			<h2 id="nadzagolovok" class="col-md-4 offset-md-8 align-self-end animated bounceIn"><i class="fa fa-mobile" aria-hidden="true"></i> +7 (914) 471-00-18</h2>
+			<h1 id="zagolovok" class="col-md-4 offset-md-8 align-self-center animated">
 				Leshmaker<br>Татьяна Попова<br>				
 			</h1>
-			<h2 id="podzagolovok" class="col-md-3 offset-md-8 align-self-start animated bounceInRight">
+			<h2 id="podzagolovok" class="col-md-4 offset-md-8 align-self-start animated bounceInRight">
 				Наращивание ресничек | Индивидуальный дизайн
 			</h2>
 		</div>
@@ -34,11 +58,11 @@
 			Только высококачественные материалы
 		</h2>
 		<div class="col-10 offset-1 row justify-content-center">
-			<span id="anim_im_1" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 whyimg animated" style="display:non"><img src="img/first_1_1.jpg" alt=""></span>
-			<span id="anim_im_2" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 offset-lg-1 offset-md-1 whyimg animated" style="display:non"><img src="img/first_1_2.jpg" alt=""></span>
-			<span id="anim_im_3" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 offset-lg-1 offset-md-1 whyimg animated" style="display:non"><img src="img/first_1_3.jpg" alt=""></span>
+			<span id="anim_im_1" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 whyimg animated" style="visibility:hidden"><img src="img/first_1_1.jpg" alt=""></span>
+			<span id="anim_im_2" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 offset-lg-1 offset-md-1 whyimg animated" style="visibility:hidden"><img src="img/first_1_2.jpg" alt=""></span>
+			<span id="anim_im_3" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 offset-lg-1 offset-md-1 whyimg animated" style="visibility:hidden"><img src="img/first_1_3.jpg" alt=""></span>
 		</div>
-		<p id="txt_1" class="col-md-8 offset-md-2" style="display:none">
+		<p id="txt_1" class="col-md-8 offset-md-2">
 			Наращивание ресничек - это не только красиво и привлекательно, но еще и огромный риск для девушки проснуться после процедуры с признаками аллергии на дешевые материалы.
 			<br>
 			Я же, в свою очередь, использую только доргие и качественные материалы для наращивания ресниц, так как целиком и полностью чувствую ответственность за своих клиентов, их здоровье и общее впечатление от встречь со мной.
@@ -51,16 +75,16 @@
 		</div>
 	</section>
 	<section id="second">
-		<h2 id="why">
+		<h2 id="by">
 			Краткий список услуг
 		</h2>
 		<div class="col-10 offset-1 row justify-content-center">
-			<span id="anim_im_4" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 whyimg2 animated" style="display:non"><img src="img/second_1_1.jpg" alt=""><br>Удлинение и придание<br>густоты ресницам</span>
-			<span id="anim_im_5" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 offset-lg-1 offset-md-1 whyimg2 animated" style="display:non"><img src="img/second_1_2.jpg" alt=""><br>Подбор формы ресниц<br>под разрез глаз</span>
-			<span id="anim_im_6" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 offset-lg-1 offset-md-1 whyimg2 animated" style="display:non"><img src="img/second_1_3.jpg" alt=""><br>Удаление ранее<br>наращённых ресниц</span>
-			<span id="anim_im_7" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0  whyimg2 animated align-self-end" style="display:non"><img src="img/second_1_4.jpg" alt=""><br>Поресничное наращивание</span>
+			<span id="anim_im_4" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 whyimg2 animated" style="visibility:hidden"><img src="img/second_1_1.jpg" alt=""><br>Удлинение и придание<br>густоты ресницам</span>
+			<span id="anim_im_5" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 offset-lg-1 offset-md-1 whyimg2 animated" style="visibility:hidden"><img src="img/second_1_2.jpg" alt=""><br>Подбор формы ресниц<br>под разрез глаз</span>
+			<span id="anim_im_6" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0 offset-lg-1 offset-md-1 whyimg2 animated" style="visibility:hidden"><img src="img/second_1_3.jpg" alt=""><br>Удаление ранее<br>наращённых ресниц</span>
+			<span id="anim_im_7" class="col-md-3 col-lg-3 col-sm-7 offset-sm-0  whyimg2 animated align-self-end" style="visibility:hidden"><img src="img/second_1_4.jpg" alt=""><br>Поресничное наращивание</span>
 		</div>
-		<p id="txt_1" class="col-md-8 offset-md-2" style="display:none">
+		<p id="txt_1" class="col-md-8 offset-md-2">
 			При обращении к мастеру не стесняйтесь задавать побольше вопросов, особенно если Вы в первый раз решили наростить себе реснички.
 			<br>
 			Так же старайтесь чётко проговаривать желаемый результат от процедуры, ведь лэшмейкер не умеет читать мысли своих клиентов, но очень этого хотела бы =)
@@ -68,23 +92,23 @@
 	</section>
 	<footer class="col-12">
 		<div class="row">
-			<div id="giswidth" class="col-lg-6 col-md-6 col-sm-12">
-				<a class="dg-widget-link" href="http://2gis.ru/chita/firm/9007727535765234/center/113.508568,52.02853/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Читы</a><div class="dg-widget-link"><a href="http://2gis.ru/chita/center/113.508568,52.02853/zoom/17/routeTab/rsType/bus/to/113.508568,52.02853╎Экран, торговый центр?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Экран, торговый центр</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":window.outerWidth/2-40,"height":600,"borderColor":"#a3a3a3","pos":{"lat":52.02853,"lon":113.508568,"zoom":17},"opt":{"city":"chita"},"org":[{"id":"9007727535765234"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
-			</div>
 			<div id="mail" class="col-lg-6 col-md-6 col-sm-12">
 				<h2>Запись на прием</h2>
-				<form action="">
-					<input class="col-12" type="phone" name="phone" placeholder="+7 914 444 44 44">
-					<input class="col-12" type="text" name="client" placeholder="Ваше имя">
-					<button class="col-lg-6 col-md-6 col-sm-12" type="button">Перезвоните мне</button>
+				<form>
+					<input id="phone" class="col-12" type="text" name="phone" placeholder="Телефон">
+					<input id="client_name" class="col-12" type="text" name="client" placeholder="Ваше имя">
+					<button id="send_dozvon" class="col-lg-6 col-md-8 col-sm-12" type="button">Перезвоните мне</button>
 				</form>
 			</div>
+			<div id="giswidth" class="col-lg-6 col-md-6 col-sm-12">
+				<div id="map"></div>
+			</div>
 		</div>
-		<p class="col-12">Все права защищены © 2017 Татьяна Попова +7 (914) 471-00-18</p>
+		<p class="col-12" style="margin-top:1em">Все права защищены © 2017 Татьяна Попова +7 (914) 471-00-18</p>
 	</footer>
 
 
-
+	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
