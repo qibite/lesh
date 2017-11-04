@@ -17,7 +17,6 @@ jQuery(document).ready(($)=>{
 			$('#anim_im_1').addClass('bounceInLeft');
 			$('#anim_im_2').addClass('bounceIn');
 			$('#anim_im_3').addClass('bounceInRight');
-			$('#parallax').css('background-position-y', -($(this).scrollTop()/7)+'px');
 		}
 	})
 	//
