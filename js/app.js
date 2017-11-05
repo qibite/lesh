@@ -28,5 +28,31 @@ jQuery(document).ready(($)=>{
 	//
 	$("#phone").mask("+7 (999) 999-99-99");
 
+	$('#send_dozvon').on('click', function(event) {
+		let phone_recall = $('#phone').val();
+		let name_recall = $('#client_name').val();
+		if (phone_recall == '' || name_recall == '') {
+			return alert('Заполните все поля для запроса')
+		}
+		$.post('../php/sender.php', {phone: phone_recall, name_r: name_recall}, function(data, textStatus, xhr) {
+			let resp = JSON.parse(data)
+			let popup = document.createElement('span');
+				popup.id = 'modal';
+				popup.className = 'col-lg-4 col-md-6 col-sm-10 offset-lg-4 offset-md-3 offset-sm-1 modal_sended';
+				popup.innerHTML = resp.html;
+			let bgpopup = document.createElement('div')
+				bgpopup.id = 'bgpopup';
+				bgpopup.append(popup)
+				document.body.append(bgpopup);
+				//setTimeout(()=>{$('#modal').remove()}, 8000)				
+		});
+	});
+	$('body').on('click', '#bgpopup', function(event) {
+		$('#phone').val('');
+		$('#client_name').val('');
+		$('html, body').animate({scrollTop: 0+'px'}, 1200)
+		$(this).remove();
+	});
+	
 })
 

@@ -211,7 +211,7 @@ form>input:focus
 :-moz-placeholder           {color:#FFF;}/* Firefox 18- */
 :-ms-input-placeholder      {color:#FFF;}
 
-form>button
+form>button, #closer
 {
 	background-color: #7f0f39;
     color: #FFF;
@@ -221,7 +221,7 @@ form>button
     border: none;
     cursor: pointer;
 }
-form>button:hover
+form>button:hover, #closer
 {
 	background-color: #981848;
 }
@@ -234,6 +234,28 @@ footer>p
     text-align: center;
     padding-bottom: .5em;
 }
+
+#bgpopup
+{
+	background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#modal
+{
+	position: fixed;
+    height: 350px;
+    background-color: #FFF;
+    top: 25vh;
+    padding: 50px;
+    text-align: center;
+    font-family: "AleksandraCRegular";
+}
+
 
 @media screen and (max-width:840px) {
 	
@@ -271,7 +293,12 @@ footer>p
 }
 
 
-@media screen and (max-width: 820px) {}
+@media screen and (max-width: 820px) {
+	#modal
+	{
+		 padding: 5px;
+	}
+}
 
 
 @media screen and (max-width:600px) {
