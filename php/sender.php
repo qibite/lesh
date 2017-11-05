@@ -9,5 +9,22 @@ EOT;
 
 $respon = array('name' => $name, 'phone' => $phone, 'html' => $html);
 
-mail("qibite@mail.ru", "Просьба перезвонить", "От $name\nНа номер $phone\n");
-echo json_encode($respon);
+// пример использования
+require_once "SendMailSmtpClass.php"; // подключаем класс
+  
+$mailSMTP = new SendMailSmtpClass('webmaster@iulesh.ru', 'FuCkOfF-1024', 'ssl://smtp.yandex.ru', 'Администрация сайта Татьяны Поповой', 465);
+// $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
+  
+// заголовок письма
+$headers= "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
+$headers .= "From: Перезвон!!!\r\n"; // от кого письмо
+$result =  $mailSMTP->send("tanusha0520@yandex.ru", "Просьба перезвонить", "От $name, по номеру $phone\n", $headers); // отправляем письмо
+// $result =  $mailSMTP->send('Кому письмо', 'Тема письма', 'Текст письма', 'Заголовки письма');
+if($result === true){
+    echo json_encode($respon);
+}else{
+    echo "Технические неполадки, заявка не оформлена =( Извините!";
+}
+
+//mail("qibite@mail.ru", "Просьба перезвонить", "От $name\nНа номер $phone\n");

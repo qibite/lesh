@@ -17,7 +17,7 @@ jQuery(document).ready(($)=>{
 		$('#header').css('background-position-y', -($(this).scrollTop()/7)+'px');
 		$('#contaner_zagolovok').css('top', -($(this).scrollTop()/3)+'px');
 		let first = document.getElementById('first');
-		if ((top_1-250) < $(this).scrollTop()) {$('#anim_im_1').addClass('bounceInLeft').css('visibility', 'visible')}
+		if ((top_1-250) < $(this).scrollTop() && $('#anim_im_1').css('visibility') != 'visible') {$('#anim_im_1').addClass('bounceInLeft').css('visibility', 'visible')}
 		if ((top_2-250) < $(this).scrollTop()) {$('#anim_im_2').addClass('bounceIn').css('visibility', 'visible')}
 		if ((top_3-250) < $(this).scrollTop()) {$('#anim_im_3').addClass('bounceInRight').css('visibility', 'visible')}
 		if ((top_4-250) < $(this).scrollTop()) {$('#anim_im_4').addClass('bounceInLeft').css('visibility', 'visible')}
@@ -53,5 +53,24 @@ jQuery(document).ready(($)=>{
 		$('html, body').animate({scrollTop: 0+'px'}, 1200)
 		$(this).remove();
 	});
+
+	var map;
+	DG.then(function () {
+		map = DG.map('map', {
+			center: [52.02853, 113.508568],
+			zoom: 17
+		});
+		DG.marker([52.02853, 113.508568]).addTo(map).bindPopup(' Реснички наращивают тут =) ');
+		/*map.locate({setView: true, watch: true})
+		.on('locationfound', function(e) {
+			DG.marker([e.latitude, e.longitude]).addTo(map);
+			})
+			.on('locationerror', function(e) {
+				DG.popup()
+				.setLatLng(map.getCenter())
+				.setContent('Доступ к определению местоположения отключён')
+				.openOn(map);
+			});*/
+		});
 })
 
