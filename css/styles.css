@@ -7,6 +7,10 @@
 			font-style: normal;
 			font-weight: normal;
 	}
+html
+{
+	background-color: #292b2c !important;
+}
 h1, h2, h3, h4
 {
     font-family: "AleksandraCRegular";
