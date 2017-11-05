@@ -53,6 +53,5 @@ jQuery(document).ready(($)=>{
 		$('html, body').animate({scrollTop: 0+'px'}, 1200)
 		$(this).remove();
 	});
-	
 })
 
