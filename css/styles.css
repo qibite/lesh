@@ -349,7 +349,7 @@ footer>p
 	{
 		margin-bottom: 2em;
 	}
-	.whyimg:first-child{visibility: visible}
+	.whyimg:first-child, .whyimg2:first-child{visibility: visible}
 	.whyimg>img, .whyimg2>img
 	{
 		margin-bottom: .5em;

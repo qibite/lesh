@@ -18,13 +18,13 @@ $(document).ready(()=>{
 		$('#header').css('background-position-y', -(scrolling/7)+'px');
 		$('#contaner_zagolovok').css('top', -(scrolling/3)+'px');
 		let first = document.getElementById('first');
-		if ((top_1-250) < scrolling && $('#anim_im_1').css('visibility') != 'visible') {$('#anim_im_1').addClass('bounceInLeft').css('visibility', 'visible')}
-		if ((top_2-250) < scrolling) {$('#anim_im_2').addClass('bounceIn').css('visibility', 'visible')}
-		if ((top_3-250) < scrolling) {$('#anim_im_3').addClass('bounceInRight').css('visibility', 'visible')}
-		if ((top_4-250) < scrolling) {$('#anim_im_4').addClass('bounceInLeft').css('visibility', 'visible')}
-		if ((top_5-250) < scrolling) {$('#anim_im_5').addClass('bounceIn').css('visibility', 'visible')}
-		if ((top_6-250) < scrolling) {$('#anim_im_6').addClass('bounceInRight').css('visibility', 'visible')}
-		if ((top_7-250) < scrolling) {$('#anim_im_7').addClass('bounceInLeft').css('visibility', 'visible')}
+		if ((top_1/1.8) < scrolling && $('#anim_im_1').css('visibility') != 'visible') {$('#anim_im_1').addClass('bounceInLeft').css('visibility', 'visible')}
+		if ((top_2/1.8) < scrolling) {$('#anim_im_2').addClass('bounceIn').css('visibility', 'visible')}
+		if ((top_3/1.8) < scrolling) {$('#anim_im_3').addClass('bounceInRight').css('visibility', 'visible')}
+		if ((top_4-400) < scrolling && $('#anim_im_4').css('visibility') != 'visible') {$('#anim_im_4').addClass('bounceInLeft').css('visibility', 'visible')}
+		if ((top_5-400) < scrolling) {$('#anim_im_5').addClass('bounceIn').css('visibility', 'visible')}
+		if ((top_6-400) < scrolling) {$('#anim_im_6').addClass('bounceInRight').css('visibility', 'visible')}
+		if ((top_7-400) < scrolling) {$('#anim_im_7').addClass('bounceInLeft').css('visibility', 'visible')}
 	})
 	//
 	$("#phone").mask("+7 (999) 999-99-99");
